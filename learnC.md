@@ -101,11 +101,28 @@ printf("My number is %d and my letter is %c", myNum, myLetter);
   * you can declare multiple variable of the same type, use the comma.
 
  ```sql
-int x = 5, y = 5, z = 5;
-printf("%d", x + y + z);
+  int x = 5, y = 5, z = 5;
+  printf("%d", x + y + z);
  ```
+# Type Conversion
+* sometimes we have to convert the value of one data type to another type.
+  
+* for example, if you try to divide two integers, ```5``` by ```2```, you cannot get ```2.5```, but since we are working with integers (not floating integers).
+  
+* to get *type conversion*, there are two type of conversion in C:
+   * Implicit conversion(automatic)
+   * xplicit conversion(manually)
 
-    
+# Implicit Conversion
+* Done automatically by the compiler, whien you assingn a value of one type to another.
+  * Example
+  ```sql
+    // Automatic conversion: int to float
+    float myFloat = 9;
+
+    printf("%f", myFloat); // 9.000000
+  ```
+
 
 
   
