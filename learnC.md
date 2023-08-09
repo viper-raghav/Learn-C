@@ -115,14 +115,197 @@ printf("My number is %d and my letter is %c", myNum, myLetter);
 
 # Implicit Conversion
 * Done automatically by the compiler, whien you assingn a value of one type to another.
+  
   * Example
+    
   ```sql
     // Automatic conversion: int to float
     float myFloat = 9;
 
     printf("%f", myFloat); // 9.000000
   ```
+  * one more example
 
+    ```sql
+    // Automatic conversion: float to int
+    int myInt = 9.99;
 
+    printf("%d", myInt); // 9
+    ```
+# Explicit Conversion
+* it is done manually.
+* by placing the type in ```()``` in front of the value.
 
+  ```sql
+  // Manual conversion: int to float
+  float sum = (float) 5 / 2;
+
+  printf("%f", sum); // 2.50000
+  ```
+# C Constants
+* If you dont want to change the values of the existing variables values, you can use the ```const``` keyword.
+* this will declare the the variable as "constant", which means unchangeable or 
+ read-only
   
+  ```sql
+  const int myNum = 15;  // myNum will always be 15
+  myNum = 10;  // error: assignment of read-only variable 'myNum'
+  ```
+# C Operator
+* used to perform operations on variables and values.
+
+  ```sql
+  int num = 100 + 50;
+  ```
+  * C divided the operator into follwing groups:
+
+    * Arithmatic operator
+    * Assignment operators
+    * Comparison operators
+    * Logical operators
+    * Bitwise operators
+
+# Arithmatic operator
+* used to perform mathematical operations.
+operator    Name            Description
+
+        ```+```   Addition,        adds two digits together
+ 
+        ```-```   substration ,    substracts one value form another
+ 
+        ```*```    Multiplication , Multiplies two values
+
+        ```/```    Division,        Divides one value by another
+
+        ```%```    modulus,         returns the division remainder
+
+        ```++```   Increment,      Increase the value of a variable by 1
+
+        ```--```   Decrement,       Decreases the value of a variable by 1
+
+# Assignment Operators
+* used to assign values to variables. we use (```=```).
+
+  ```sql
+  int x = 10;
+  ```
+  ```sql
+  int x = 10;
+  x += 5;
+  ```
+  * here ```+=``` is used to add value to a variable.
+    
+  * here is the list of Assignment operator:
+
+     * ```=```
+    
+     * ```+=```
+
+     * ```-=```
+
+     * ```*=```
+   
+     * ```/=```
+   
+     * ```%=```
+   
+     * ```&=```
+   
+     * ```|=```
+   
+     * ```^=```
+    
+     * ```>>=```
+   
+     * ```<<=```
+#  Comparison operator
+* used to compare two values.
+* The return value of a comparison is either ```1``` or``` 0```, which means true (```1```) or false (```0```). These values are known as Boolean values
+  
+     ```sql
+     int x = 5;
+     int y = 3;
+     printf("%d", x > y); // returns 1 (true) because 5 is greater than 3
+     ```
+* list of comparison operators:
+     * ```==```
+     * ```!=```
+     * ```>```
+     * ```<```
+     * ```>=```
+     * ```<=```
+ 
+# Logical Operator
+* you can test for true or flase with logical operator.
+  ```sql
+  ```&&``` LOGICAL AND, Returns true if both statements are true. e.g. x < 5 && x < 
+                        10
+  
+  ```||``` LOGICAL OR, returns true if one of the statements is true. e.g. x <5 || 
+                       x < 4
+  
+  ```!```  LOGICAL NOT, reverse the result, returs false if the result is true.!(x 
+                        < 5 && x < 10)
+  ```
+
+#Sizeof Operator
+
+* The memory size (in bytes) of a data type or a variable can be found with the sizeof operator:
+
+   ```sql
+   int myInt;
+   float myFloat;
+   double myDouble;
+   char myChar;
+
+   printf("%lu\n", sizeof(myInt));
+   printf("%lu\n", sizeof(myFloat));
+   printf("%lu\n", sizeof(myDouble));
+   printf("%lu\n", sizeof(myChar));
+
+   // OutPut
+      4
+      4
+      8
+      1
+   ```
+
+# Booleans
+
+ * Very often, in programming, you will need a data type that can only have one of two values, like:
+
+     * YES / NO
+     * ON / OFF
+     * TRUE / FALSE
+       
+* For this, C has a ```bool``` data type, which is known as booleans.
+
+Booleans represent values that are either ```true``` or ```false```.
+
+* a boolean variable is declared witht he ```bool``` keyword and can only take the value ```true``` or ```false```.
+
+  ```sql
+      bool isProgrammingFun = true;
+      bool isFishTasty = false;
+  ```
+  Before trying to print the boolean variable, you should know that boolena values are returned as integers:
+     * ```1``` (or any other number that is not 0) represents ```true```
+     *  ```0``` represents ```false```
+# comparing valus and variables
+ * Comparing values are useful in programming, because it helps us to find answers 
+   and make decisions.
+
+* For example, you can use a comparison operator, such as the greater than (>) 
+  operator, to compare two values:
+
+  ```sql
+  printf("%d", 10 > 9);  // Returns 1 (true) because 10 is greater than 9
+  ```
+  
+
+   
+  
+   
+
+      
+          
