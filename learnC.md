@@ -302,10 +302,341 @@ Booleans represent values that are either ```true``` or ```false```.
   printf("%d", 10 > 9);  // Returns 1 (true) because 10 is greater than 9
   ```
   
-
-   
+ * Cool, right? An even better approach (since we are on a roll now), would be to wrap the code above in an if...else statement, so we can perform different actions depending on the result:
   
-   
+```sql
+int myAge = 25;
+int votingAge = 18;
+
+if (myAge >= votingAge) {
+  printf("Old enough to vote!");
+} else {
+  printf("Not old enough to vote.");
+}
+```
+
+# C If...Else
+
+   # Conditions and If Statements
+
+   * You have already learned that C supports the usual logical conditions from mathematics:
+
+     * Less than: ```a < b```
+     * Less than or equal to: ```a <= b```
+     * Greater than: ```a > b```
+     * Greater than or equal to: ```a >= b```
+     * Equal to ```a == b```
+     * Not Equal to: ```a != b```
+
+  * You can use these conditions to perform different actions for different decisions.
+
+  * C has the following conditional statements:
+
+    * Use ```if``` to specify a block of code to be executed, if a specified condition is true
+      
+    * Use ```else``` to specify a block of code to be executed, if the same condition is false
+      
+    * Use ```else if``` to specify a new condition to test, if the first condition is false
+      
+    * Use ```switch``` to specify many alternative blocks of code to be executed
+
+ # The If statement
+
+ * use the ```if``` statement to specify a block of code to be executed if a condition is ```true```.
+
+ * here is the Syntax:
+   ```sql
+   if (condition) {
+      // block of code to be executed if the condition is true.
+   }
+   ```
+* In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:
+  ```sql
+  if (20 > 18 ) {
+     printf("20 is greater than 18")
+  }
+  ```
+# The Else Statement
+
+* Use the ```else``` statement to specify a block of code to be executed if the condition is ```false```.
+* Syntax:
+  ```sql
+  int time = 20;
+  if (time < 18) {
+  printf("Good day.");
+  } else {
+  printf("Good evening.");
+  }
+  // Outputs "Good evening."
+  ```
+# The else if statment 
+
+* Use the ```else if``` statement to specify a new condition if the first condition is ```false```.
+* Syntax
+  ```sql
+  if (condition1) {
+  // block of code to be executed if condition1 is true
+  } else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+  } else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+  }
+  ```
+* Example
+  ```sql
+  int time = 22;
+  if (time < 10) {
+  printf("Good morning.");
+  } else if (time < 20) {
+  printf("Good day.");
+  } else {
+  printf("Good evening.");
+  }
+  // Outputs "Good evening."
+  ```
+* In the example above, time (22) is greater than 10, so the first condition is ```false```. The next condition, in 
+  the  ```else if``` statement, is also false, so we move on to the ```else``` condition since condition1 and 
+ condition2 is both ```false``` - and print to the screen "Good evening".
+# C short hand if else(Ternary operator)
+
+* Short Hand If...Else (Ternary Operator)
+  There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. 
+  It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else 
+  statements:
+```sql
+variable = (condition) ? expressionTrue : expressionFalse;
+```
+* example:
+  ```sql
+  int time = 20;
+  (time < 18) ? printf("Good day.") : printf("Good evening.");
+  ```
+# Switch statement
+* instead od writing many ```if...else``` statements, you can use the ```switch``` statements.
+* Syntax:
+  ```sql
+  switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+  }
+  ```
+  * This is how it works:
+      * the ```switch``` expression is evaluated once.
+      * the value of the expression is compared with the values of each ```case```.
+      * if there is a match, the associated block of code is executed.
+      * the ```break``` statement breaks out of the swtich blocks and stops the ececution.
+      * the ```default``` statement is optional, and specifies some code to run is no match.
+      * here is an example:
+
+  ```sql
+  int day = 4;
+
+  switch (day) {
+  case 1:
+    printf("Monday");
+    break;
+  case 2:
+    printf("Tuesday");
+    break;
+  case 3:
+    printf("Wednesday");
+    break;
+  case 4:
+    printf("Thursday");
+    break;
+  case 5:
+    printf("Friday");
+    break;
+  case 6:
+    printf("Saturday");
+    break;
+  case 7:
+    printf("Sunday");
+    break;
+    }
+    // Outputs "Thursday" (day 4)
+    ```
+
+# The break keyword
+
+* When C reaches a break keyword, it breaks out of the switch block.
+* This will stop the execution of more code and case testing inside the block.
+& When a match is found, and the job is done, it's time for a break. There is no need for more testing.
+
+# The default keyword
+
+* the ```default``` keyword specifies some code to run if there is no case match:
+
+  ```sql
+  int day = 4;
+
+  switch (day) {
+  case 6:
+    printf("Today is Saturday");
+    break;
+  case 7:
+    printf("Today is Sunday");
+    break;
+  default:
+    printf("Looking forward to the Weekend");
+  }
+
+  // Outputs "Looking forward to the Weekend"
+  ```
+
+# C while Loop
+
+  # Loops
+  * Loops can execute a block of code as long as a specified condition is reached.
+  * Loops are handy because they save time, reduce errors, and they make code more readable.
+
+#  While Loop
+* Syntax:
+  ```sql
+  while (condition) {
+  // code block to be executed
+  }
+  ```
+
+* in the example below, the code in the loop will run, over and over again, as long as the variable (```i```) is less than 5:
+  
+  ```sql
+  int i = 0;
+
+  while (i < 5) {
+  printf("%d\n", i);
+  i++;
+  }
+  ```
+# The Do/while Loop
+
+* The ```Do/while``` loop is a variant of the ```while``` loop. this loop will execute the code block, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+  ```sql
+  do {
+     // code block to be executed
+  }
+  while (condition);
+  }
+  ```
+* The example below uses a ```do/while``` loop. The loop will always be executed at least once, even if the condition 
+  is false, because the code block is executed before the condition is tested:
+
+  ```sql
+  int i = 0;
+
+  do {
+  printf("%d\n", i);
+  i++;
+  }
+  while (i < 5);
+  ```
+
+# C For Loop
+
+* When you know exactly how many times you want to loop through a block of, use the ```for``` loop instead of a ```while``` loop:
+
+  ```sql
+  for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+  }
+  ```
+
+  * Statement 1 is executed (one time) before the execution of the code block.
+
+  * Statement 2 defines the condition for executing the code block.
+
+  * Statement 3 is executed (every time) after the code block has been executed.
+
+```sql
+int i;
+
+for (i = 0; i < 5; i++) {
+  printf("%d\n", i);
+}
+```
+
+# Nested Loops
+
+* it is also possibel to place a loop inside another loop. this is called a nested loop.
+
+* the "inner loop" will be executed one time for each iteration of the "out loop":
+
+  ```sql
+  int i, j;
+
+  // Outer loop
+  for (i = 1; i <= 2; ++i) {
+  printf("Outer: %d\n", i);  // Executes 2 times
+
+  // Inner loop
+  for (j = 1; j <= 3; ++j) {
+    printf(" Inner: %d\n", j);  // Executes 6 times (2 * 3)
+  }
+  }
+  ```
+# C break and continue
+
+# Break
+ * the break statements can also be used to jump out of a loop.
+ * here is an example:
+   ```sql
+   int i;
+
+   for (i = 0; i < 10; i++) {
+   if (i == 4) {
+    break;
+   }
+   printf("%d\n", i);
+   }
+   ```
+# Continue
+
+* the ```continue``` statement breaks one iteration, if a specified condition occurs, and continues with the next 
+  iteration in the loop.
+
+# Break and continue in while Loop
+
+* you can use ```break```and```continue```in while loops:
+* Break example:
+  
+  ```sql
+  int i = 0;
+
+  while (i < 10) {
+  if (i == 4) {
+    break;
+  }
+  printf("%d\n", i);
+  i++;
+  }
+  ```
+* Continue example:
+
+  ```sql
+  int i = 0;
+
+  while (i < 10) {
+  if (i == 4) {
+    i++;
+    continue;
+  }
+  printf("%d\n", i);
+  i++;
+  }
+  ```
+  
+  
+  
+  
+  
+
 
       
           
