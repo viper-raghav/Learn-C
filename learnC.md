@@ -686,9 +686,20 @@ for(i = 0; i > 4; i++) {
 
 # set array size
 
-* another common
+* another common way to create arrays, is to specify the size of the array, and add elements later:
 
     ```sql
+    // Declare an array of four integers:
+    int myNumbers[4];
+
+    // Add elements
+    myNumbers[0] = 25;
+    myNumbers[1] = 50;
+    myNumbers[2] = 75;
+    myNumbers[3] = 100;
+    ```
+
+    
     
   
   
