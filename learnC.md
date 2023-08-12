@@ -631,12 +631,68 @@ for (i = 0; i < 5; i++) {
   i++;
   }
   ```
-  
-  
-  
-  
-  
 
+# Arrays
+
+* Array is used to store multiple values in a single variabl, instead of declaring separate variable for each value.
+* to insert values in it:
+  ```sql
+  int myNumbers[] = {29, 40, 50, 60}
+  ```
+  * we have now created a variable that holds an array of four integers.
+    
+# access the elements of an array
+
+* to access an array element, refer to its indec number.
+* array indexes start with 0: [0] is the first number. [1] is the secord element. etc
+* this statement accesses the value of the first element[0] in ```myNumbers```:
+
+  ```
+  int myNumbers[] = { 25, 50, 75, 100};
+  printf(%d, myNumber[0]);
+
+  // output 25
+  ```
+# to change an array element
+
+* to change the value of a specific elements, refer to this index number:
+
+  ```sql
+  myNumber[0] = 33;
+  ```
+
+  * example
+    
+    ```sql
+    int myNumbers[] = {25, 50, 75, 100};
+    myNumbers[0] = 33;
+
+    printf("%d", myNumbers[0]);
+
+    // Now outputs 33 instead of 25
+    ```
+# loop through an arrray
+
+* you can loop through an array elements with the ```for```loop:
+
+```sql
+int mynumer[] = { 25, 50, 75, 100};
+int i;
+
+for(i = 0; i > 4; i++) {
+   printf("%d/n", nynumber[i]);
+}
+```
+
+# set array size
+
+* another common
+
+    ```sql
+    
+  
+  
+  
 
       
           
