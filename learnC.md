@@ -711,6 +711,49 @@ for(i = 0; i > 4; i++) {
  ```sql
 int matrix[2][3] = {{1,4,2}, {3, 6, 8}};
 ```
+* The first dimension represents the number of rows [2], while the second dimension represents the number of columns [3]. The values are placed in row-order, and can be visualized like this:
+
+  ![](https://github.com/viper-raghav/learn-C/blob/main/col-row.png)
+  
+# Access the elements of a 2D array
+* to acces the element of 2D array, you must specify the index number of both the row and column.
+* this statement access the value of the element in the first row(0) and third column(2) of the matrix array.
+  ```sql
+  int matrix [2][3] = {{1, 2, 3}, {3,6, 8}};
+
+  print("%d", matric[0][2]); // outputs 2
+  ```
+# change elements in a 2D array
+* to change the value of an element, refer to the index number of the element in each of the dimension:
+* the following example will change the value of the element in the first row (0) and first column(0):
+* the follwing example will change the value of the element in the first row(0) and first column(0):
+  ```sql
+  int main() {
+  int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
+  matrix[0][0] = 9;
+  printf("%d", matrix[0][0]);  // Now outputs 9 instead of 1
+ 
+  return 0;
+  }
+  ```
+# loop through a 2d array
+* To loop through a multi-dimensional array, you need one loop for each of the array's dimensions.
+
+* The following example outputs all elements in the matrix array:
+  
+  ```sql
+  int matrix[2][3] = {{1, 4, 2},{3, 6, 8}};
+
+  int i, j;
+  for (i = 0: i < 2; i++) {
+    for (j = 0; j < 3; j++) {
+      printf("%d\n", matrix[i][j]);
+     }
+  }
+  ```
+  
+  
+
     
     
   
