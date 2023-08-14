@@ -698,7 +698,19 @@ for(i = 0; i > 4; i++) {
     myNumbers[2] = 75;
     myNumbers[3] = 100;
     ```
+# C multidimensional arrays
 
+* if you want to store data in tabular form, like a table with rows and columns.
+* a multidimensional arrays is basically an array of arrays.
+* an array can have number of dimensions, here we will only learn about 2D array.
+
+# two-dimensional array
+* an 2d array is also knows as a matrix.(a table of row and column)
+* to create a 2D array of integers, take a look at the follwing example:
+
+ ```sql
+int matrix[2][3] = {{1,4,2}, {3, 6, 8}};
+```
     
     
   
