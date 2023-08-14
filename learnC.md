@@ -751,7 +751,52 @@ int matrix[2][3] = {{1,4,2}, {3, 6, 8}};
      }
   }
   ```
-  
+
+# C Strings
+* strings are used for storing text/characters.
+
+* for example, "Hello world" is a string of characters.
+
+* String does not have "string type" to create string variable. instead, you must usw the ```char``` type and create array of character to make a string in C.
+
+  ```sql
+  char greeyings[] = "Hello World";
+  ```
+  * now that we have to use double quotes(```""```).
+  * to output the string, you can use the ```printf()``` function together with the format specifier ```%s``` to tell C that we are now working with strings:
+ 
+    ```sql
+    char greeting[] = "hello world";
+    printf("%s", greetings);
+    ```
+# Access Strings
+* since strings are actully arrays in C, you can access a string by reffering to its index number square brackets```[]```.
+
+  ```sql
+  char greetings[] = "hello world!";
+  printf("%c", greetings[0]); // outputs h
+  ```
+# Modify Strings
+* to change the value of a specify  character in a string, refer to the index number, use the single quotes:
+
+  ```sql
+  char greetings[] = "Hello World!";
+  greetings[0] = 'J';
+  printf("%s", greetings);
+  // Outputs Jello World! instead of Hello World
+  ```
+# Loop through a string
+* you can also loop through a string, using a "for" loop:
+
+  ```sql
+  int main() {
+     char carname[] = "volvo";
+     int i;
+
+     for (i = 0; i < 5; ++i) {
+       printf("%c\n", carname[i]);
+     }
+    ```
   
 
     
