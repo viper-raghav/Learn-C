@@ -797,6 +797,85 @@ int matrix[2][3] = {{1,4,2}, {3, 6, 8}};
        printf("%c\n", carname[i]);
      }
     ```
+# C Special Characters
+* beacause string must be written within quotes, C will misunderstand this string, and generate an error:
+
+  ```sql
+  char txt[] = "we have to attend this "seminar" no matter what";
+  ```
+* the solution to avoid this problem, is to use the backslash escapse character.
+* the backslash (```\```) escape character turns special character into string character:
+* ```Escape character```: ```\'```: single quote
+
+* ```\"```: ```"```: double quote
+
+* ```\\```:```\```: backslash
+
+* Example:
+
+  ```sql
+  char txt[] = "we cannot make more \"pullution"\";
+  ```
+
+  ```sql
+  char txt[] = "it\'s alright.";
+  ```
+
+ # C String Functions
+ * C also has many string functions, which can be used to perform certain operations on stringd.
+
+   # String Length
+ * to get the lenth of the string, you can use the ```strlen90``` function:
+
+    ```sql
+    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    printf("%d", strlen(alphabet)); // outputs 26
+    ```
+   # Concatenate Strings
+ * to concatenate(combine) two strings, you can use the ```strcat``` function:
+
+   ```sql
+   char str1[20] = "Hello ";
+   char str2[] = "World!";
+
+   // Concatenate str2 to str1 (result is stored in str1)
+   strcat(str1, str2);
+
+   // Print str1
+   printf("%s", str1);
+   ```
+   # Copy Strings
+   * to copy the value of one string to another, you can use the ```strcpy()```:
+
+     ```sql
+     char str1[20] = "Hello World!";
+     char str2[20];
+
+     // Copy str1 to str2
+     strcpy(str2, str1);
+
+     // Print str2
+     printf("%s", str2")
+     ```
+   # Compare Strings
+   * to compare two strings, you can use the ```strcmp()``` function.
+   * it returns ```0``` if the two strings are equal, otherwise a value that is not 0:
+  
+     ```sql
+     char str1[] = "hello";
+     char str2[] = "hello";
+     char str3[] = "hello";
+
+     // compare str1 and str2, and print the result
+     printf("%d", strcmp(str1, str2)); // returns 0
+
+     // compare str1 and str3, and print the result
+     printf("%d\n", strcmp(str1, str3)); // returns 0
+     ```
+   
+    
+
+  
   
 
     
