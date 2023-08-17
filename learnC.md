@@ -1,7 +1,10 @@
 # Learn C
  #  what is C?
  * C is is genreal purpose programming language, created by dennis retchie in 1972.
- * developed in UNIX.
+ * C programming has influenced the development of many modern programming languages, including C++, Java, Python, and more.
+ *  It forms the foundation of many operating systems, including Unix and Linux, and has been used to create a wide range of software, from simple command-line 
+    utilities to complex applications.
+    
 #  why learn C?
 * Very popular programming language.
 * if you know C, then learning langs like java, c++, python, will be easy for you.
