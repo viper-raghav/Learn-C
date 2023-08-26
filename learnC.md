@@ -875,6 +875,32 @@ int matrix[2][3] = {{1,4,2}, {3, 6, 8}};
      // compare str1 and str3, and print the result
      printf("%d\n", strcmp(str1, str3)); // returns 0
      ```
+
+# User Input
+* basically ```printf()``` is used to output values in C
+* to get user input, you can use the ```scanf()``` function:
+
+  ```sql
+  // Create an integer variable that will store the number we get from the user
+  int myNum;
+
+  // ask the user to type a number
+  printf("type a number: \n");
+
+  //get and save the number the user types
+  scan("%d", &mynum);
+
+  // output the number the user typed
+  print("your number is: %d, mynum");
+  ```
+
+  # Multiple Inputs
+  * the ```scanf()``` function also allow multiple inputs.
+
+  
+    
+  
+     
    
     
 
