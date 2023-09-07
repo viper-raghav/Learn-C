@@ -949,8 +949,108 @@ printf("Hello %s", fullName);
 # C Memory Address
 * when a variable is created in C, a memory address is assigned to the variable.
 * the memory address is the location of wher the varible is stored on the computer.
-* 
+* whe  we assign a value to the variable, it is stored in this memory address.
+* to access it, use the reference operator (```&```), and the result represents where the variable is stored
+ ```sql
+  int myAge = 43;
+  printf("%p", &myAge); // Outputs 0x7ffe5367e044
+ ```
+* Note: The memory address is in hexadecimal form (0x..). You will probably not get the same result in your program, as this depends 
+  on where the variable is stored on your computer.
+* You should also note that ```&myAge``` is often called a "pointer". A pointer basically stores the memory address of a variable as its 
+  value. To print pointer values, we use the ```%p``` format specifier.
 
+# C Pointers
+
+ # Creating pointers
+ * you learned from the previos chapter, that we can get the memory address of a variable with the reference operaotr```&```:
+   ```sql
+   iny myage = 43; // an int variable
+
+   printf("%d, myage"); // outputs the value of myage(43)
+   printf("%p",&myage); // outputs the memory address of my age(0x7ffe5367e044)
+   ```
+* A pointer is a variable that stores the memory address of another variable as its value.
+* A pointer variable points to a data type (like ```int```) of the same type, and is created with the ```*``` operator.
+
+  ```sql
+  int myAge = 43;     // An int variable
+  int* ptr = &myAge;  // A pointer variable, with the name ptr, that stores the address of myAge
+
+  // Output the value of myAge (43)
+  printf("%d\n", myAge);
+
+  // Output the memory address of myAge (0x7ffe5367e044)
+  printf("%p\n", &myAge);
+
+  // Output the memory address of myAge with the pointer (0x7ffe5367e044)
+  printf("%p\n", ptr);
+  ```
+# Deference
+* you can also ge the value of the variable the pointer points to, by using the ```*``` operator(the deference operator);
+
+```sql
+int myAge = 43;     // Variable declaration
+int* ptr = &myAge;  // Pointer declaration
+
+// Reference: Output the memory address of myAge with the pointer (0x7ffe5367e044)
+printf("%p\n", ptr);
+
+// Dereference: Output the value of myAge with the pointer (43)
+printf("%d\n", *ptr);
+```
+# C Pointers and Arrays
+* you can also use pointers to access arrays.
+* Consider the following array of integers;
+
+  ```sql
+  int mynumber[4] = {25, 45, 56, 67};
+  ```
+* we learned in the arrays chapter that you can loop through the array elementsn with a ```for``` loop:
+
+ ```sql
+ int myNumbers[4] = {25, 50, 75, 100};
+ int i;
+
+ for (i = 0; i < 4; i++) {
+   printf("%d\n", myNumbers[i]);
+ }
+ ```
+* now lets print the memory address of each array:
+
+  ```sql
+  int myNumbers[4] = {25, 50, 75, 100};
+  int i;
+
+  for (i = 0; i < 4; i++) {
+  printf("%p\n", &myNumbers[i]);
+  }
+  ```
+# How are pointers related to arrays?
+* in C, the name of an array, is actully a pointer to the first element of the array.
+* we cann use ```*```operator to access it:
+  ```sql
+  int mynumber[4] = {25, 50, 75, 100};
+
+  printf("%d, *mynumber");
+  ```
+* to access the rest of the elements in mynumbers, you can increment the pointer/array(+1, +2, etc)
+  ```sql
+  int myNumbers[4] = {25, 50, 75, 100};
+
+  // Get the value of the second element in myNumbers
+  printf("%d\n", *(myNumbers + 1));
+
+  // Get the value of the third element in myNumbers
+  printf("%d", *(myNumbers + 2));
+
+  // and so on..
+  ```
+  
+  
+
+
+  
    
     
 
